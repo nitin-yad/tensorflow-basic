@@ -1,12 +1,9 @@
 import os
-from tf.traffic_data_analysis.LoadData import load_data
+import matplotlib.pyplot as plt
+from tf.traffic_data_analysis.LoadData import load_training_data
 
 
-ROOT_PATH = '/Nitin/BelgiumTSDataSet/'
-training_data_dir = os.path.join(ROOT_PATH, 'Training')
-
-images, labels = load_data(training_data_dir)
-
+images, labels = load_training_data()
 
 print(images.ndim)
 print(images.size)
@@ -14,3 +11,5 @@ print(images.flags)
 print(images.itemsize)
 print(images.nbytes)
 
+plt.hist(labels, 62)
+plt.show()

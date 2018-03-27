@@ -1,8 +1,22 @@
 import os
 import skimage
 import numpy as np
-
 from skimage import data
+
+
+ROOT_PATH = '/Nitin/BelgiumTSDataSet/'
+
+
+def load_training_data():
+
+    training_data_dir = os.path.join(ROOT_PATH, 'Training')
+    return load_data(training_data_dir)
+
+
+def load_test_data():
+
+    test_data_dir = os.path.join(ROOT_PATH, 'Testing')
+    return load_data(test_data_dir)
 
 
 def load_data(data_dir):
