@@ -21,14 +21,17 @@ def load_data(data_dir):
     return np.asarray(images), np.asarray(labels)
 
 
-ROOT_PATH = '/Nitin/BelgiumTSDataSet/'
-training_data_dir = os.path.join(ROOT_PATH, 'Training')
-testing_data_directory = os.path.join(ROOT_PATH, 'Testing')
-images, labels = load_data(training_data_dir)
-# images, labels = load_data("/Nitin/BelgiumTSDataSet/Training")
+def main():
+    ROOT_PATH = '/Nitin/BelgiumTSDataSet/'
+    training_data_dir = os.path.join(ROOT_PATH, 'Training')
+    testing_data_directory = os.path.join(ROOT_PATH, 'Testing')
+    images, labels = load_data(training_data_dir)
+    print(images.ndim)
+    print(images.size)
+    print(images[0])
 
-# im = np.asarray(images)
 
-print(images.ndim)
-print(images.size)
-print(images[0])
+if __name__ == "__main__":
+    main()
+
+
