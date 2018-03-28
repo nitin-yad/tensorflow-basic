@@ -1,4 +1,3 @@
-import os
 import matplotlib.pyplot as plt
 from tf.traffic_data_analysis.LoadData import load_training_data
 
